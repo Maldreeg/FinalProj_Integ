@@ -1,92 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap.min.css">
     <title>Home</title>
     <style>
-        body {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            margin: 0;
-        }
-        nav {
-            grid-column: 1 / 3;
-            grid-row: 1 / 4;
-            background-color: #bef39a;
-            padding: 10px;
+        .sidebar{
             height: 100vh;
             position: fixed;
-            width: calc((100% / 12) * 2);
         }
-        .nav-link{
-            color: black;
-            text-align: center;
+        .banner{
+            background-color: aquamarine;
         }
-        .nav-link:hover{
-            color: white;
-        }
-        .banner {
-            grid-column: 3 / 13;
-            grid-row: 1 / 2;
+        .content{
             background-color: #f39a9d;
-            padding: 10px;
-        }
-        .maincontent {
-            grid-column: 3 / 13;
-            grid-row: 2 / 3;
-            background-color: #c2ecea;
-            padding: 10px;
             height: 100vh;
         }
-        .footer {
-            grid-column: 3 / 13;
-            grid-row: 3 / 4;
-            background-color: #f39a9d;
-            padding: 10px;
+        .footer{
+            background-color: aquamarine;
+        }
+        @media (max-width: 576px) {
+            .sidebar {
+                height: 20vh;
+            }
+            .banner{
+                padding-top: 20vh;
+            }
         }
     </style>
 </head>
 <body>
-    <nav>
-        <ul class="nav flex-column nav-underline">
-            <li class="nav-item">
-                <a class="nav-link active" href="HomePage.html">LOGO</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="AboutPage.html">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="ProductAndServicesPage.html">Product and Services</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" class="nav-link" href="PersonnelPage.html">Personnel</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="EventsPage.html">News and Events</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="BlogPage.html">Blogs</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="CommercialPage.html">AV and Commercial</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="SupportPage.html">Support</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="ContactPage.html">Contact Us</a>
-            </li>
-        </ul>
-    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-2 col-12 bg-dark sidebar">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column align-items-center" style="font-size: smaller;">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Logo Here</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="AboutPage.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ProductAndServicesPage.html">Product and Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" class="nav-link" href="PersonnelPage.html">Personnel</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="EventsPage.html">News and Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="BlogPage.html">Blogs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="CommercialPage.html">AV and Commercial</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="SupportPage.html">Support</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ContactPage.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
 
-    <div class="banner">
-        <h1>BANNER</h1>
-    </div>
-    <div class="maincontent">
-        <h1>MAIN CONTENT</h1>
-    </div>
-    <div class="footer">
-        <h1>FOOTER</h1>
+
+            <main role="main" class="col-md-10 offset-md-2 ml-sm-auto col-lg-10">
+                <div class="row">
+                    <div class="col-12 banner">
+                        <h1>BANNER/could be breadcrumbs</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 content">
+                        <h1>Content</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 footer">
+                        <h1>Footer</h1>
+                    </div>
+                </div>
+            </main>
+        </div>
     </div>
 
 
@@ -104,6 +101,6 @@
 
 
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
