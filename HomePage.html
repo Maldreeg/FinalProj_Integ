@@ -99,6 +99,20 @@
             width: 35px;
         }
 
+        .list-group-item:hover{
+            transform: scale(155%);
+            margin-top: 15px;
+            margin-bottom: 15px;
+            transition: all ease-in-out 0.3s;
+        }
+
+        .custom-tooltip.tooltip > .tooltip-inner{
+            background-color: rgb(242, 132, 132);
+            color: white;
+            padding: 10px;
+            border: solid rgb(181, 75, 75) 3px;
+        }
+
         @media (max-width: 686px) {
             .sidebar {
                 display: none;
@@ -115,31 +129,31 @@
 
 <nav class="sidebar show">
     <div class="list-group list-group-flush">
-        <a href="#" class="list-group-item list-group-item-action">
+        <a href="#" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="HOME" data-bs-placement="right">
             <img src="Assets/Logo.png" alt="" class="logo">
         </a>
-        <a href="#" class="list-group-item list-group-item-action">
+        <a href="#" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="ABOUT US" data-bs-placement="right">
             <img src="Assets/About.png" alt="" class="icon">
         </a>
-        <a href="#" class="list-group-item list-group-item-action">
+        <a href="#" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="PRODUCTS" data-bs-placement="right">
             <img src="Assets/Products.png" alt="" class="icon">
         </a>
-        <a href="#" class="list-group-item list-group-item-action">
+        <a href="#" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="PERSONNEL" data-bs-placement="right">
             <img src="Assets/Personnel.png" alt="" class="icon">
         </a>
-        <a href="#" class="list-group-item list-group-item-action">
+        <a href="#" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="NEWS" data-bs-placement="right">
             <img src="Assets/News.png" alt="" class="icon">
         </a>
-        <a href="#" class="list-group-item list-group-item-action">
+        <a href="#" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="BLOG" data-bs-placement="right">
             <img src="Assets/Blogs.png" alt="" class="icon">
         </a>
-        <a href="#" class="list-group-item list-group-item-action">
+        <a href="#" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="VIDEOS" data-bs-placement="right">
             <img src="Assets/AV.png" alt="" class="icon">
         </a>
-        <a href="#" class="list-group-item list-group-item-action">
+        <a href="#" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="SUPPORT" data-bs-placement="right">
             <img src="Assets/Support.png" alt="" class="icon">
         </a>
-        <a href="#" class="list-group-item list-group-item-action">
+        <a href="#" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="CONTACT US" data-bs-placement="right">
             <img src="Assets/Contacts.png" alt="" class="icon">
         </a>
     </div>
@@ -187,6 +201,11 @@
 </section>
 
 <script src="bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
-
+<script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl,{
+    'customClass': 'custom-tooltip'
+  }));
+</script>
 </body>
 </html>
