@@ -99,9 +99,9 @@
         .maincontent{
             background-color: #fff;
         }
-        .footer{
-            background-color: #ff69b4;
-        }
+        footer{
+    padding: 20px 120px;
+}
         h1{
             color: #f58287;
         }
@@ -129,13 +129,12 @@
             --bs-btn-hover-bg: #ec00ec ;
         }
         .list-group-item:hover{
-            transform: scale(155%);
-            margin-top: 15px;
-            margin-bottom: 15px;
+            margin-top: 2px;
+            margin-bottom: 2px;
             transition: all ease-in-out 0.3s;
         }
         .custom-tooltip.tooltip > .tooltip-inner{
-            background-color: rgb(242, 132, 132);
+            background-color: #E38C8D;
             color: white;
             padding: 10px;
             border: solid rgb(243, 190, 190) 2px;
@@ -150,6 +149,21 @@
             height: 500px;
             
         }
+
+        .header {
+    height: 10vh;
+    background-color: #E38C8D; 
+    color: white; 
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .header h1 {
+    margin: 0;
+    font-size: 12px;
+  }
         
         @media (max-width: 686px) {
             .sidebar {
@@ -239,8 +253,8 @@
     </div>
     </nav>
 
-    <div class="banner container">
-        
+    <div class="header sticky-top">
+        <h1 style="color: white;">Welcome to Sugar Trends!</h1>
     </div>
     
     <div class="row maincontent container-fluid">
@@ -305,7 +319,7 @@
                                 <p><strong>Caleb de Tyler </strong> <small class="text-body-secondary">recommends</small> <strong>Sugar Trends</strong></p>
                             </div>
                           </div>
-                          <p class="card-text">Absolutely loved the fresh doughnuts and pastries – perfect for breakfast.</p>
+                          <p class="card-text">Absolutely loved the fresh doughnuts and pastries – perfect for breakfast. I love it, I love it!</p>
                         </div>
                     </div>
                 </div>
@@ -417,12 +431,45 @@
         </div>
     </div>
 
-    <div class="row footer container-fluid  ">
-        <div class="col-md-10 offset-md-1">
-            <h1>Footer</h1>
+    <hr>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Navigation</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Personnel</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Blogs</a></li>
+                        <li><a href="#">Audiovisual</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Contacts</a></li>
+                    </ul>
+                  </div>
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <ul class="list-unstyled">
+                      <li><a href="#">Facebook</a></li>
+                      <li><a href="#">Instagram</a></li>
+                      <li><a href="#">Tiktok</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>About</h5>
+                    <p>At Sugar Trends, we specialize in Tres Leches cakes and fresh fruit donuts, bringing a delightful burst of sweetness to every occasion. Our mission is to bake to make someone’s day, delivering high-quality baked products closer to every home.</p>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <p>&copy; 2024 Sugar Trends. All rights reserved.</p>
+                </div>
+            </div>
         </div>
-    </div>
-    
+      </footer>
 
 
 

@@ -6,83 +6,94 @@
     <link rel="stylesheet" href="style.css">
     <title>About</title>
     <style>
+         .list-group-item:hover{
+            margin-top: 2px;
+            margin-bottom: 2px;
+            transition: all ease-in-out 0.3s;
+        }
+        .custom-tooltip.tooltip > .tooltip-inner{
+            background-color: #E38C8D;
+            color: white;
+            padding: 10px;
+            border: solid rgb(243, 190, 190) 2px;
+        }
     </style>
 </head>
 <body>
 
-<nav class="sidebar show">
-    <div class="list-group list-group-flush">
-        <a href="#" class="list-group-item list-group-item-action">
-            <img src="Assets/Logo.png" alt="" class="logo">
-        </a>
-        <a href="#" class="list-group-item list-group-item-action">
-            <img src="Assets/About.png" alt="" class="icon">
-        </a>
-        <a href="#" class="list-group-item list-group-item-action">
-            <img src="Assets/Products.png" alt="" class="icon">
-        </a>
-        <a href="#" class="list-group-item list-group-item-action">
-            <img src="Assets/Personnel.png" alt="" class="icon">
-        </a>
-        <a href="#" class="list-group-item list-group-item-action">
-            <img src="Assets/News.png" alt="" class="icon">
-        </a>
-        <a href="#" class="list-group-item list-group-item-action">
-            <img src="Assets/Blogs.png" alt="" class="icon">
-        </a>
-        <a href="#" class="list-group-item list-group-item-action">
-            <img src="Assets/AV.png" alt="" class="icon">
-        </a>
-        <a href="#" class="list-group-item list-group-item-action">
-            <img src="Assets/Support.png" alt="" class="icon">
-        </a>
-        <a href="#" class="list-group-item list-group-item-action">
-            <img src="Assets/Contacts.png" alt="" class="icon">
-        </a>
-    </div>
-</nav>
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container"> 
-        <a class="navbar-brand" href="#">
+    <nav class="sidebar show col-md-2">
+        <div class="list-group list-group-flush">
+            <a href="HomePage.html" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="HOME" data-bs-placement="right">
+                <img src="Assets/Logo.png" alt="" class="logo">
+            </a>
+            <a href="AboutPage.html" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="ABOUT US" data-bs-placement="right">
+                <img src="Assets/About.png" alt="" class="icon">
+            </a>
+            <a href="ProductAndServicesPage.html" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="PRODUCTS" data-bs-placement="right">
+                <img src="Assets/Products.png" alt="" class="icon">
+            </a>
+            <a href="PersonnelPage.html" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="PERSONNEL" data-bs-placement="right">
+                <img src="Assets/Personnel.png" alt="" class="icon">
+            </a>
+            <a href="EventsPage.html" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="NEWS" data-bs-placement="right">
+                <img src="Assets/News.png" alt="" class="icon">
+            </a>
+            <a href="BlogPage.html" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="BLOG" data-bs-placement="right">
+                <img src="Assets/Blogs.png" alt="" class="icon">
+            </a>
+            <a href="CommercialPage.html" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="VIDEOS" data-bs-placement="right">
+                <img src="Assets/AV.png" alt="" class="icon">
+            </a>
+            <a href="SupportPage.html" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="SUPPORT" data-bs-placement="right">
+                <img src="Assets/Support.png" alt="" class="icon">
+            </a>
+            <a href="ContactPage.html" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="CONTACT US" data-bs-placement="right">
+                <img src="Assets/Contacts.png" alt="" class="icon">
+            </a>
+        </div>
+    </nav>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="HomePage.html">
             <img src="Assets/Logo.png" alt="Logo" class="logo">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto"> 
+            <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="AboutPage.html">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Products</a>
+                    <a class="nav-link" href="ProductAndServicesPage.html">Products</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Personnel</a>
+                    <a class="nav-link" href="PersonnelPage.html">Personnel</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">News</a>
+                    <a class="nav-link" href="EventsPage.html">News</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Blogs</a>
+                    <a class="nav-link" href="BlogPage.html">Blogs</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Audiovisual</a>
+                    <a class="nav-link" href="CommercialPage.html">Audiovisual</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Support</a>
+                    <a class="nav-link" href="SupportPage.html">Support</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contacts</a>
+                    <a class="nav-link" href="co.html">Contacts</a>
                 </li>
             </ul>
         </div>
     </div>
-</nav>
+    </nav>
 
 <div class="header sticky-top">
-    <h1>About</h1>
+    <h1>Welcome to Sugar Trends!</h1>
 </div>
 
 <div class="maincontent">
@@ -214,6 +225,11 @@
 </footer>
 
 <script src="bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
-
+<script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl,{
+    'customClass': 'custom-tooltip'
+  }));
+</script>
 </body>
 </html>
