@@ -105,25 +105,21 @@
         h1{
             color: #f58287;
         }
-        .main_item_img{
-            width: 100%;
-            object-fit:cover;
-            object-position: center;
-            max-height: 650px;
-            border-radius: 24px;
-        }
-        .main_item_img_small{
-            width: 100%;
-            border-radius: 24px;
-        }
         .profile_pic{
-            height: 60px;
-            width: 60px;
+            height: 50px;
+            width: 50px;
             object-fit: contain;
             background-color: #fff;
             border-radius: 50%;
-            border: 1px solid rgb(211, 208, 208);
-
+            border: 1px solid rgb(255, 235, 235);
+        }
+        .profile_pic_2{
+            height: 40px;
+            width: 40px;
+            object-fit: contain;
+            background-color: #fff;
+            border-radius: 50%;
+            border: 1px solid rgb(255, 235, 235);
         }
         .btn{
             background-color: #ff69b4;
@@ -150,6 +146,11 @@
         .card{
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         }
+        .img-fluid{
+            height: 500px;
+            
+        }
+        
         @media (max-width: 686px) {
             .sidebar {
                 display: none;
@@ -160,8 +161,8 @@
             .banner{
                 padding-top: 9vh;
             }
-            .main_item_img_small{
-            display: none;
+            .img-fluid{
+            height: 500px;
             }
         }
     </style>
@@ -201,7 +202,7 @@
     
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="HomePage.html">
             <img src="Assets/Logo.png" alt="Logo" class="logo">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -210,28 +211,28 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="AboutPage.html">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Products</a>
+                    <a class="nav-link" href="ProductAndServicesPage.html">Products</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Personnel</a>
+                    <a class="nav-link" href="PersonnelPage.html">Personnel</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">News</a>
+                    <a class="nav-link" href="EventsPage.html">News</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Blogs</a>
+                    <a class="nav-link" href="BlogPage.html">Blogs</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Audiovisual</a>
+                    <a class="nav-link" href="CommercialPage.html">Audiovisual</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Support</a>
+                    <a class="nav-link" href="SupportPage.html">Support</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contacts</a>
+                    <a class="nav-link" href="co.html">Contacts</a>
                 </li>
             </ul>
         </div>
@@ -245,104 +246,162 @@
     <div class="row maincontent container-fluid">
         <div class="col-md-10 offset-md-1">
 
-            <h1 class="text-center my-4" style="font-family: Tahoma;"><strong>NEWS AND EVENTS</strong></h1>
-
-
-            <!--ITEMS-->
-            <div class="card my-2 mb-4">
-                <h6 class="card-header d-flex align-items-center">
-                    <img class='profile_pic me-3' src="Assets/Logo.png" alt="">
-                    <strong>Sugar Trend</strong>
-                </h6>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="row">
-                                <div class="col-md-9 col-12">
-                                    <img class="main_item_img" src="Images/Cake_Event3.jpg" alt="">
-                                </div>
-                                <div class="col-3">
-                                    <img class="main_item_img_small mb-4" src="Images/Cake_Event2.jpg" alt="">
-                                    <img class="main_item_img_small" src="Images/Cake_Event1.jpg" alt="">
-                                </div>
-                            </div>
+            <h1 class="text-center my-4" style="font-family: Tahoma;"><strong>Blogs and Reviews</strong></h1>
+            <!--Big Blog-->
+            <div class="card mb-3">
+                <div class="row g-2">
+                  <div class="col-md-7">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="Images/blog_img_1.jpg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="Images/blog_img_2.jpg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="Images/blog_img_3.jpg" class="d-block w-100" alt="...">
+                          </div>
                         </div>
-                        <div class="col-12 mt-4">
-                            <h5 class="card-title">Show how much you love your mama and impress her with our Cream Puff Tower! Beautiful isn’t it? Just like her 🫶🏻</h5>
-                            <p class="card-text">
-                                <a href="#">#sugartrend</a> <a href="#">#cakesph</a> <a href="#">#treslechesph</a> <a href="#">#creampuffmanila</a>
-                            </p>
-                            <a href="#" class="btn btn-primary btn_color">Read More →</a>
+                      </div>
+                  </div>
+                  <div class="col-md-5">
+                    <div class="card-body">
+                      <h2 class="card-title"><strong>A Sweet Surprise</strong></h5>
+                      <p class="card-text">When we first visited this bakery, we had modest expectations. However, the reality was far better than expected! From the moment we stepped in, the aroma of freshly baked goods enveloped us, promising a treat for the senses. The highlight of our purchase was the cakes. Unlike many commercial cakes that tend to be overly sweet, these were perfectly balanced, earning a thumbs-up from our senior family members who often shy away from desserts that are too sugary. It's safe to say that the cakes are worth every penny, and we’ll definitely be buying them again for future celebrations.</p>
+                      <div class="row my-2">
+                        <div class="col-2">
+                            <img src="Images/gir_profile_1.jpg" class="profile_pic">
+                        </div>
+                        <div class="col-10 d-flex align-items-center">
+                            <p><strong>Samantha Taylor </strong> <small class="text-body-secondary">recommends</small> <strong>Sugar Trends</strong></p>
+                        </div>
+                      </div>
+                      <p class="card-text mt-auto"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Big Blog-->
+            
+
+            <div class="container-fluid mt-5">
+                <h3 style="color: #f58287;">
+                    <b>More Reviews:</b>
+                </h3>
+            </div>
+            
+            <div class="row g-0">
+                <div class="col-md-4 align-items-center">
+                    <div class="card m-2">
+                        <img src="Images/review1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h3 class="card-title"><strong>"Delicious"</strong></h3>
+                          <div class="row my-2">
+                            <div class="col-2">
+                                <img src="Images/guy_profile_1.jpg" class="profile_pic_2">
+                            </div>
+                            <div class="col-10 d-flex align-items-center">
+                                <p><strong>Caleb de Tyler </strong> <small class="text-body-secondary">recommends</small> <strong>Sugar Trends</strong></p>
+                            </div>
+                          </div>
+                          <p class="card-text">Absolutely loved the fresh doughnuts and pastries – perfect for breakfast.</p>
                         </div>
                     </div>
-                </div>               
-            </div>
-            <!--ITEM-->
+                </div>
 
-            <!--ITEM-->
-            <div class="card my-2 mb-4">
-                <h6 class="card-header d-flex align-items-center">
-                    <img class='profile_pic me-3' src="Assets/Logo.png" alt="">
-                    <strong>Sugar Trend</strong>
-                </h6>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="row">
-                                <div class="col-md-9 col-12">
-                                    <img class="main_item_img" src="Images/Cake_Event1_Valentine.jpg" alt="">
-                                </div>
-                                <div class="col-3">
-                                    <img class="main_item_img_small mb-4" src="Images/Cake_Event2_Valentine.jpg" alt="">
-                                    <img class="main_item_img_small" src="Images/Cake_Event3_Valentine.jpg" alt="">
-                                </div>
+                <div class="col-md-4 align-items-center">
+                    <div class="card m-2">
+                        <img src="Images/review2.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h3 class="card-title"><strong>"Yummers"</strong></h3>
+                          <div class="row my-2">
+                            <div class="col-2">
+                                <img src="Images/gir_profile_1.jpg" class="profile_pic_2">
                             </div>
+                            <div class="col-10 d-flex align-items-center">
+                                <p><strong>Samantha Taylor </strong> <small class="text-body-secondary">recommends</small> <strong>Sugar Trends</strong></p>
+                            </div>
+                          </div>
+                          <p class="card-text">The custom cakes were a hit at our party, beautifully decorated and delicious!</p>
                         </div>
-                        <div class="col-12 mt-4">
-                            <h5 class="card-title">ITS BAAAACK! Our Tres Leches Heart Cakes are back! And it will only be available on Feb 13-14. 🫶🏻</h5>
-                            <p class="card-text">
-                                <a href="#">#sugartrend</a> <a href="#">#cakesph</a> <a href="#">#treslechesph</a> <a href="#">#creampuffmanila</a> <a href="#">#valentinesday </a>
-                            </p>
-                            <a href="#" class="btn btn-primary">Read More →</a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 align-items-center">
+                    <div class="card m-2">
+                        <img src="Images/review3.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h3 class="card-title"><strong>"Amazing"</strong></h3>
+                          <div class="row my-2">
+                            <div class="col-2">
+                                <img src="Images/guy_profile_2.jpg" class="profile_pic_2">
+                            </div>
+                            <div class="col-10 d-flex align-items-center">
+                                <p><strong>Bailey David</strong> <small class="text-body-secondary">recommends</small> <strong>Sugar Trends</strong></p>
+                            </div>
+                          </div>
+                          <p class="card-text">Great variety of unique desserts that even our kids enjoyed; we'll definitely be back.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <!--ITEM-->
 
-            <!--ITEM-->
-            <div class="card my-2 mb-4">
-                <h6 class="card-header d-flex align-items-center">
-                    <img class='profile_pic me-3' src="Assets/Logo.png" alt="">
-                    <strong>Sugar Trend</strong>
-                </h6>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="row">
-                                <div class="col-md-9 col-12">
-                                    <img class="main_item_img" src="Images/Cake_Event1_Christmas.jpg" alt="">
-                                </div>
-                                <div class="col-3">
-                                    <img class="main_item_img_small mb-4" src="Images/Cake_Event2_Christmas.jpg" alt="">
-                                    <img class="main_item_img_small" src="Images/Cake_Event3_Christmas.jpg" alt="">
-                                </div>
+            <div class="row g-0">
+                <div class="col-md-4 align-items-center">
+                    <div class="card m-2">
+                        <img src="Images/review4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h3 class="card-title"><strong>"Cozy"</strong></h3>
+                          <div class="row my-2">
+                            <div class="col-2">
+                                <img src="Images/guy_profile_3.jpg" class="profile_pic_2">
                             </div>
-                        </div>
-                        <div class="col-12 mt-4">
-                            <h5 class="card-title">Here’s our Christmas menu, a little something for your holiday gifts, giveaways and noche buena!</h5>
-                            <p class="card-text">
-                                <a href="#">#sugartrend</a> <a href="#">#cakesph</a> <a href="#">#treslechesph</a> <a href="#">#creampuffmanila</a> <a href="#">#christmasph</a>
-                            </p>
-                            <a href="#" class="btn btn-primary">Read More →</a>
+                            <div class="col-10 d-flex align-items-center">
+                                <p><strong>De Bitles O Sumshi</strong> <small class="text-body-secondary">recommends</small> <strong>Sugar Trends</strong></p>
+                            </div>
+                          </div>
+                          <p class="card-text">Freshly baked bread was delightful and made our morning so much better with coffee.</p>
+                          </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 align-items-center">
+                    <div class="card m-2">
+                        <img src="Images/review5.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h3 class="card-title"><strong>"10/10"</strong></h3>
+                          <div class="row my-2">
+                            <div class="col-2">
+                                <img src="Images/guy_profile_4.jpg" class="profile_pic_2">
+                            </div>
+                            <div class="col-10 d-flex align-items-center">
+                                <p><strong>Abel Makkonen</strong> <small class="text-body-secondary">recommends</small> <strong>Sugar Trends</strong></p>
+                            </div>
+                          </div>
+                          <p class="card-text">This bakery's large menu offers something for everyone, from sweet treats to savory bites.</p>
+                          </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 align-items-center">
+                    <div class="card m-2">
+                        <img src="Images/review6.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h3 class="card-title"><strong>"Try It!"</strong></h3>
+                          <div class="row my-2">
+                            <div class="col-2">
+                                <img src="Images/gir_profile_2.jpg" class="profile_pic_2">
+                            </div>
+                            <div class="col-10 d-flex align-items-center">
+                                <p><strong>Keysni Alicia</strong> <small class="text-body-secondary">recommends</small> <strong>Sugar Trends</strong></p>
+                            </div>
+                          </div>
+                          <p class="card-text">Delicious pastries and a cozy atmosphere make this place a must-visit for any dessert lover.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <!--ITEM-->
-
-
-
 
 
 
