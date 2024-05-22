@@ -1,93 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>Blog</title>
+    <title>Blogs</title>
     <style>
-        body {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            margin: 0;
+        @keyframes moveUpDown {
+            0%, 100% {
+                transform: translateY(-50%);
+            }
+            50% {
+                transform: translateY(-48%);
+            }
         }
-        nav {
-            grid-column: 1 / 3;
-            grid-row: 1 / 4;
-            background-color: #bef39a;
-            padding: 10px;
-            height: 100vh;
+        .sidebar {
+            height: 76vh; 
+            width: 90px; 
+            position: fixed; /*Alternative for "sticky"*/
+            top: 50%; 
+            background-color: rgba(255, 255, 255, 0.2); 
+            border-right: 2px solid rgba(255, 255, 255, 0.2); 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+            padding: 20px; 
+            z-index: 1000; 
+            transform: translateY(-50%);
+            animation: moveUpDown 3s infinite; 
+            backdrop-filter: blur(10px); 
+            border-bottom-right-radius: 40px; 
+            border-top-right-radius: 40px; 
+        }
+
+        .sidebar-toggler {
+            position: fixed; 
+            top: 10px; 
+            left: 10px; 
+            background-color: #ff69b4; 
+            color: white; 
+            border: none;
+            padding: 10px; 
+            cursor: pointer; 
+            border-radius: 50%; 
+            z-index: 1001;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+        }
+
+        .sidebar h2 {
+            font-family: 'Cursive', sans-serif;
+            color: #ff69b4; 
+            margin-bottom: 20px; 
+        }
+
+        .sidebar .list-group-item {
+            font-family: 'Cursive', sans-serif;
+            font-size: 1em; 
+            background-color: transparent;
+            border: none;
+            color: #d2691e; 
+            padding: 5px;
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            transition: background-color 0.3s; 
+        }
+
+        .navbar {
+            display: none;
             position: fixed;
-            width: calc((100% / 12) * 2);
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            z-index: 1000;
+            padding: 10px 20px;
+            backdrop-filter: blur(10px); 
         }
-        .nav-link{
-            color: black;
-            text-align: center;
+
+        .navbar .navbar-brand, .navbar-nav .nav-link {
+            color: #E38C8D;
+            font-family: 'Cursive', sans-serif;
+            font-size: 1em;
         }
-        .nav-link:hover{
+        .navbar .navbar-nav .nav-link {
+            margin-right: 15px;
+        }
+
+        .logo {
+            width: 100px;
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+
+        .icon {
+            width: 35px;
+        }
+        .maincontent{
+            background-color: #fff;
+        }
+        .footer{
+            background-color: #ff69b4;
+        }
+        h1{
+            color: #f58287;
+        }
+        .main_item_img{
+            width: 100%;
+            object-fit:cover;
+            object-position: center;
+            max-height: 650px;
+            border-radius: 24px;
+        }
+        .main_item_img_small{
+            width: 100%;
+            border-radius: 24px;
+        }
+        .profile_pic{
+            height: 60px;
+            width: 60px;
+            object-fit: contain;
+            background-color: #fff;
+            border-radius: 50%;
+            border: 1px solid rgb(211, 208, 208);
+
+        }
+        .btn{
+            background-color: #ff69b4;
+            --bs-btn-border-color: #fff;
+            --bs-btn-hover-border-color: #fff;
+            --bs-btn-hover-color: #fff;
+            --bs-btn-hover-bg: #ec00ec ;
+        }
+        .list-group-item:hover{
+            transform: scale(155%);
+            margin-top: 15px;
+            margin-bottom: 15px;
+            transition: all ease-in-out 0.3s;
+        }
+        .custom-tooltip.tooltip > .tooltip-inner{
+            background-color: rgb(242, 132, 132);
             color: white;
-        }
-        .banner {
-            grid-column: 3 / 13;
-            grid-row: 1 / 2;
-            background-color: #f39a9d;
             padding: 10px;
+            border: solid rgb(243, 190, 190) 2px;
         }
-        .maincontent {
-            grid-column: 3 / 13;
-            grid-row: 2 / 3;
-            background-color: #c2ecea;
-            padding: 10px;
-            height: 100vh;
+        .card-header{
+            background-color: #ffd6d8;
         }
-        .footer {
-            grid-column: 3 / 13;
-            grid-row: 3 / 4;
-            background-color: #f39a9d;
-            padding: 10px;
+        .card{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+        @media (max-width: 686px) {
+            .sidebar {
+                display: none;
+            }
+            .navbar {
+                display: block;
+            }
+            .banner{
+                padding-top: 9vh;
+            }
+            .main_item_img_small{
+            display: none;
+            }
         }
     </style>
 </head>
-<body>
-    <nav>
-        <ul class="nav flex-column nav-underline">
-            <li class="nav-item">
-                <a class="nav-link" href="HomePage.html">LOGO</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="AboutPage.html">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="ProductAndServicesPage.html">Product and Services</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" class="nav-link" href="PersonnelPage.html">Personnel</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="EventsPage.html">News and Events</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" href="BlogPage.html">Blogs</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="CommercialPage.html">AV and Commercial</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="SupportPage.html">Support</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="ContactPage.html">Contact Us</a>
-            </li>
-        </ul>
+<body style="margin:0">
+    <nav class="sidebar show col-md-2">
+        <div class="list-group list-group-flush">
+            <a href="HomePage.html" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="HOME" data-bs-placement="right">
+                <img src="Assets/Logo.png" alt="" class="logo">
+            </a>
+            <a href="AboutPage.html" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="ABOUT US" data-bs-placement="right">
+                <img src="Assets/About.png" alt="" class="icon">
+            </a>
+            <a href="ProductAndServicesPage.html" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="PRODUCTS" data-bs-placement="right">
+                <img src="Assets/Products.png" alt="" class="icon">
+            </a>
+            <a href="PersonnelPage.html" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="PERSONNEL" data-bs-placement="right">
+                <img src="Assets/Personnel.png" alt="" class="icon">
+            </a>
+            <a href="EventsPage.html" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="NEWS" data-bs-placement="right">
+                <img src="Assets/News.png" alt="" class="icon">
+            </a>
+            <a href="BlogPage.html" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="BLOG" data-bs-placement="right">
+                <img src="Assets/Blogs.png" alt="" class="icon">
+            </a>
+            <a href="CommercialPage.html" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="VIDEOS" data-bs-placement="right">
+                <img src="Assets/AV.png" alt="" class="icon">
+            </a>
+            <a href="SupportPage.html" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="SUPPORT" data-bs-placement="right">
+                <img src="Assets/Support.png" alt="" class="icon">
+            </a>
+            <a href="ContactPage.html" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="CONTACT US" data-bs-placement="right">
+                <img src="Assets/Contacts.png" alt="" class="icon">
+            </a>
+        </div>
+    </nav>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="Assets/Logo.png" alt="Logo" class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Personnel</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Blogs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Audiovisual</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Support</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contacts</a>
+                </li>
+            </ul>
+        </div>
+    </div>
     </nav>
 
-    <div class="banner">
-        <h1>BANNER</h1>
+    <div class="banner container">
+        
     </div>
-    <div class="maincontent">
-        <h1>MAIN CONTENT</h1>
+    
+    <div class="row maincontent container-fluid">
+        <div class="col-md-10 offset-md-1">
+
+            <h1 class="text-center my-4" style="font-family: Tahoma;"><strong>NEWS AND EVENTS</strong></h1>
+
+
+            <!--ITEMS-->
+            <div class="card my-2 mb-4">
+                <h6 class="card-header d-flex align-items-center">
+                    <img class='profile_pic me-3' src="Assets/Logo.png" alt="">
+                    <strong>Sugar Trend</strong>
+                </h6>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-md-9 col-12">
+                                    <img class="main_item_img" src="Images/Cake_Event3.jpg" alt="">
+                                </div>
+                                <div class="col-3">
+                                    <img class="main_item_img_small mb-4" src="Images/Cake_Event2.jpg" alt="">
+                                    <img class="main_item_img_small" src="Images/Cake_Event1.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <h5 class="card-title">Show how much you love your mama and impress her with our Cream Puff Tower! Beautiful isn’t it? Just like her 🫶🏻</h5>
+                            <p class="card-text">
+                                <a href="#">#sugartrend</a> <a href="#">#cakesph</a> <a href="#">#treslechesph</a> <a href="#">#creampuffmanila</a>
+                            </p>
+                            <a href="#" class="btn btn-primary btn_color">Read More →</a>
+                        </div>
+                    </div>
+                </div>               
+            </div>
+            <!--ITEM-->
+
+            <!--ITEM-->
+            <div class="card my-2 mb-4">
+                <h6 class="card-header d-flex align-items-center">
+                    <img class='profile_pic me-3' src="Assets/Logo.png" alt="">
+                    <strong>Sugar Trend</strong>
+                </h6>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-md-9 col-12">
+                                    <img class="main_item_img" src="Images/Cake_Event1_Valentine.jpg" alt="">
+                                </div>
+                                <div class="col-3">
+                                    <img class="main_item_img_small mb-4" src="Images/Cake_Event2_Valentine.jpg" alt="">
+                                    <img class="main_item_img_small" src="Images/Cake_Event3_Valentine.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <h5 class="card-title">ITS BAAAACK! Our Tres Leches Heart Cakes are back! And it will only be available on Feb 13-14. 🫶🏻</h5>
+                            <p class="card-text">
+                                <a href="#">#sugartrend</a> <a href="#">#cakesph</a> <a href="#">#treslechesph</a> <a href="#">#creampuffmanila</a> <a href="#">#valentinesday </a>
+                            </p>
+                            <a href="#" class="btn btn-primary">Read More →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--ITEM-->
+
+            <!--ITEM-->
+            <div class="card my-2 mb-4">
+                <h6 class="card-header d-flex align-items-center">
+                    <img class='profile_pic me-3' src="Assets/Logo.png" alt="">
+                    <strong>Sugar Trend</strong>
+                </h6>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-md-9 col-12">
+                                    <img class="main_item_img" src="Images/Cake_Event1_Christmas.jpg" alt="">
+                                </div>
+                                <div class="col-3">
+                                    <img class="main_item_img_small mb-4" src="Images/Cake_Event2_Christmas.jpg" alt="">
+                                    <img class="main_item_img_small" src="Images/Cake_Event3_Christmas.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <h5 class="card-title">Here’s our Christmas menu, a little something for your holiday gifts, giveaways and noche buena!</h5>
+                            <p class="card-text">
+                                <a href="#">#sugartrend</a> <a href="#">#cakesph</a> <a href="#">#treslechesph</a> <a href="#">#creampuffmanila</a> <a href="#">#christmasph</a>
+                            </p>
+                            <a href="#" class="btn btn-primary">Read More →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--ITEM-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
     </div>
-    <div class="footer">
-        <h1>FOOTER</h1>
+
+    <div class="row footer container-fluid  ">
+        <div class="col-md-10 offset-md-1">
+            <h1>Footer</h1>
+        </div>
     </div>
+    
+
 
 
 
@@ -105,5 +382,11 @@
 
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl,{
+        'customClass': 'custom-tooltip'
+      }));
+    </script>
 </body>
 </html>
