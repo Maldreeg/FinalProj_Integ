@@ -1,104 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap.min.css">
-    <title>Sugar Trends</title>
-    <style>
-        @keyframes moveUpDown {
-            0%, 100% {
-                transform: translateY(-50%);
-            }
-            50% {
-                transform: translateY(-48%);
-            }
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+<title>Sugar Trends</title>
+<style>
+@keyframes moveUpDown {
+  0%, 100% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(-48%);
+  }
+}
+
+.sidebar {
+  height: 76vh;
+  width: 90px;
+  position: fixed; /*Alternative for "sticky"*/
+  top: 50%;
+  left: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-right: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  z-index: 1000;
+  transform: translateY(-50%);
+  animation: moveUpDown 3s infinite;
+  backdrop-filter: blur(10px);
+  border-bottom-right-radius: 40px;
+  border-top-right-radius: 40px;
+}
+
+.sidebar-toggler {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 1001;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.sidebar h2 {
+  font-family: 'Cursive', sans-serif;
+  color: #ff69b4;
+  margin-bottom: 20px;
+}
+
+.sidebar .list-group-item {
+  font-family: 'Cursive', sans-serif;
+  font-size: 1em;
+  background-color: transparent;
+  border: none;
+  color: #d2691e;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.navbar {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+  padding: 10px 20px;
+  backdrop-filter: blur(10px);
+}
+
+.navbar .navbar-brand, .navbar-nav .nav-link {
+  color: #E38C8D;
+  font-family: 'Cursive', sans-serif;
+  font-size: 1em;
+}
+
+.navbar .navbar-nav .nav-link {
+  margin-right: 15px;
+}
+
+.logo {
+  width: 100px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.icon {
+  width: 35px;
+}
+        .header {
+          position: relative;
+          overflow: hidden;
+          height: 90px; 
+          grid-column: 1/13;
         }
 
-        .sidebar {
-            height: 76vh; 
-            width: 90px; 
-            position: fixed; /*Alternative for "sticky"*/
-            top: 50%; 
-            left: 20px; 
-            background-color: rgba(255, 255, 255, 0.2); 
-            border-right: 2px solid rgba(255, 255, 255, 0.2); 
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
-            padding: 20px; 
-            z-index: 1000; 
-            transform: translateY(-50%);
-            animation: moveUpDown 3s infinite; 
-            backdrop-filter: blur(10px); 
-            border-bottom-right-radius: 40px; 
-            border-top-right-radius: 40px; 
+        .header img {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          height: 100%;
         }
 
-        .sidebar-toggler {
-            position: fixed; 
-            top: 10px; 
-            left: 10px; 
-            background-color: #ff69b4; 
-            color: white; 
-            border: none;
-            padding: 10px; 
-            cursor: pointer; 
-            border-radius: 50%; 
-            z-index: 1001;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+        .maincontent {
+          grid-column: 1 / 13;
+          margin: 0px 120px;
+          padding: 10px;
+          height: 100vh;
+          z-index: 999; /* Ensure it's above other content */
         }
 
-        .sidebar h2 {
-            font-family: 'Cursive', sans-serif;
-            color: #ff69b4; 
-            margin-bottom: 20px; 
+        .footer {
+          grid-column: 1 / 13;
+          background-color: #f39a9d;
+          padding: 10px;
         }
 
-        .sidebar .list-group-item {
-            font-family: 'Cursive', sans-serif;
-            font-size: 1em; 
-            background-color: transparent;
-            border: none;
-            color: #d2691e; 
-            padding: 5px;
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            transition: background-color 0.3s; 
+        body {
+          display: grid;
+          grid-template-columns: repeat(12, 1fr);
+          margin: 0;
         }
-
-        .navbar {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: rgba(255, 255, 255, 0.2);
-            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            z-index: 1000;
-            padding: 10px 20px;
-            backdrop-filter: blur(10px); 
-        }
-
-        .navbar .navbar-brand, .navbar-nav .nav-link {
-            color: #E38C8D;
-            font-family: 'Cursive', sans-serif;
-            font-size: 1em;
-        }
-
-        .navbar .navbar-nav .nav-link {
-            margin-right: 15px;
-        }
-
-        .logo {
-            width: 100px;
-            margin-top: 8px;
-            margin-bottom: 8px;
-        }
-
-        .icon {
-            width: 35px;
-        }
-
+                
         .list-group-item:hover{
             transform: scale(155%);
             margin-top: 15px;
@@ -120,12 +154,18 @@
             .navbar {
                 display: block;
             }
+            .header {
+                display: none;
+            }
+            .maincontent {
+              margin: 0;
+              padding-top: 100px;
+              grid-column: 1 / 13;
+            }
         }
     </style>
 </head>
 <body>
-
-<!--To do: Develop assets for active buttons.-->
 
 <nav class="sidebar show">
     <div class="list-group list-group-flush">
@@ -160,45 +200,52 @@
 </nav>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">
-        <img src="Assets/Logo.png" alt="Logo" class="logo">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Products</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Personnel</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">News</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Blogs</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Audiovisual</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Support</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Contacts</a>
-            </li>
-        </ul>
-    </div>
+  <a class="navbar-brand" href="#">
+    <img src="Assets/Logo.png" alt="Logo" class="logo">
+  </a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Products</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Personnel</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">News</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Blogs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Audiovisual</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Support</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contacts</a>
+      </li>
+    </ul>
+  </div>
 </nav>
 
-<section>
-    
-</section>
+<header class="header">
+  <img src="Assets/Header.png" alt="">
+</header>
+
+<div class="maincontent">
+  <h1>MAIN CONTENT</h1>
+</div>
+<div class="footer">
+  <h1>FOOTER</h1>
+</div>
 
 <script src="bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
 <script>
