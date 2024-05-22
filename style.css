@@ -154,7 +154,7 @@ a.sidebar-link:hover {
   
   .header h1 {
     margin: 0;
-    font-size: 12px;
+    font-size: 2rem;
   }
   
   @keyframes moveUpDown {
@@ -246,6 +246,21 @@ a.sidebar-link:hover {
     margin-top: 8px;
     margin-bottom: 8px;
   }
+
+  .custom-tooltip.tooltip > .tooltip-inner{
+    background-color: rgb(242, 132, 132);
+    color: white;
+    padding: 10px;
+    border: solid rgb(181, 75, 75) 3px;
+}
+
+.list-group-item:hover{
+    transform: scale(155%);
+    margin-top: 15px;
+    margin-bottom: 15px;
+    transition: all ease-in-out 0.3s;
+}
+
   
   .icon {
     width: 35px;

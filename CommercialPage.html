@@ -150,7 +150,12 @@
             height: 500px;
             
         }
+
         
+        footer{
+            padding: 20px 120px;
+        }
+                
         @media (max-width: 686px) {
             .sidebar {
                 display: none;
@@ -164,10 +169,15 @@
             .img-fluid{
             height: 500px;
             }
+            footer{
+                padding: 20px 40px;
+                margin-top: 60px;
+            }
         }
     </style>
 </head>
 <body style="margin:0">
+    
     <nav class="sidebar show col-md-2">
         <div class="list-group list-group-flush">
             <a href="HomePage.html" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="HOME" data-bs-placement="right">
@@ -182,13 +192,13 @@
             <a href="PersonnelPage.html" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="PERSONNEL" data-bs-placement="right">
                 <img src="Assets/Personnel.png" alt="" class="icon">
             </a>
-            <a href="EventsPage.html" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="NEWS" data-bs-placement="right">
+            <a href="EventsPage.html" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="NEWS & EVENTS" data-bs-placement="right">
                 <img src="Assets/News.png" alt="" class="icon">
             </a>
             <a href="BlogPage.html" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="BLOG" data-bs-placement="right">
                 <img src="Assets/Blogs.png" alt="" class="icon">
             </a>
-            <a href="CommercialPage.html" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="VIDEOS" data-bs-placement="right">
+            <a href="CommercialPage.html" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="COMMERCIALS" data-bs-placement="right">
                 <img src="Assets/AV.png" alt="" class="icon">
             </a>
             <a href="SupportPage.html" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="SUPPORT" data-bs-placement="right">
@@ -199,10 +209,9 @@
             </a>
         </div>
     </nav>
-    
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="HomePage.html">
+        <a class="navbar-brand" href="index.html">
             <img src="Assets/Logo.png" alt="Logo" class="logo">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -220,19 +229,19 @@
                     <a class="nav-link" href="PersonnelPage.html">Personnel</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="EventsPage.html">News</a>
+                    <a class="nav-link" href="EventsPage.html">News & Events</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="BlogPage.html">Blogs</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="CommercialPage.html">Audiovisual</a>
+                    <a class="nav-link" href="CommercialPage.html">Commercials</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="SupportPage.html">Support</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="co.html">Contacts</a>
+                    <a class="nav-link" href="ContactPage.html">Contacts</a>
                 </li>
             </ul>
         </div>
@@ -330,44 +339,47 @@
                 
 
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
         </div>
     </div>
 
-    <div class="row footer container-fluid  ">
-        <div class="col-md-10 offset-md-1">
-            <h1>Footer</h1>
+    <footer class="footer" style="background-color: #E38C8D;color: white;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5><strong>Our Pages</strong></h5>
+                    <ul class="list-unstyled">
+                        <li><a href="HomePage.html" style="text-decoration: none;color: white;">Home</a></li>
+                        <li><a href="AboutPage.html" style="text-decoration: none;color: white;">About</a></li>
+                        <li><a href="ProductAndServicesPage.html" style="text-decoration: none;color: white;">Products</a></li>
+                        <li><a href="PersonnelPage.html" style="text-decoration: none;color: white;">Personnel</a></li>
+                        <li><a href="EventsPage.html" style="text-decoration: none;color: white;">News</a></li>
+                        <li><a href="BlogPage.html" style="text-decoration: none;color: white;">Blogs</a></li>
+                        <li><a href="CommercialPage.html" style="text-decoration: none;color: white;">Audiovisual</a></li>
+                        <li><a href="SupportPage.html" style="text-decoration: none;color: white;">Support</a></li>
+                        <li><a href="ContactPage.html" style="text-decoration: none;color: white;">Contacts</a></li>
+                    </ul>
+                  </div>
+                <div class="col-md-4">
+                    <h5><strong>Follow Us</strong></h5>
+                    <ul class="list-unstyled">
+                      <li><a href="https://www.facebook.com/sugartrendcakes/" style="text-decoration: none;color: white;">Facebook</a></li>
+                      <li><a href="https://www.instagram.com/sugartrendcakes/" style="text-decoration: none;color: white;">Instagram</a></li>
+                      <li><a href="https://www.tiktok.com/@sugar.trend" style="text-decoration: none;color: white;">Tiktok</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5><strong>About</strong></h5>
+                    <p>At Sugar Trends, we specialize in Tres Leches cakes and fresh fruit donuts, bringing a delightful burst of sweetness to every occasion. Our mission is to bake to make someone’s day, delivering high-quality baked products closer to every home.</p>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <p>&copy; 2024 Sugar Trends. All rights reserved.</p>
+                </div>
+            </div>
         </div>
-    </div>
-    
+      </footer>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
         const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
