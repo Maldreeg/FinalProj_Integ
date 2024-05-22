@@ -96,23 +96,53 @@
         .icon {
             width: 35px;
         }
-        .banner{
-            background-color: #ff69b4;
-        }
         .maincontent{
             background-color: #fff;
         }
         .footer{
             background-color: #ff69b4;
         }
+        h1{
+            color: #f58287;
+        }
         .main_item_img{
             width: 100%;
             object-fit:cover;
             object-position: center;
             max-height: 650px;
+            border-radius: 24px;
         }
         .main_item_img_small{
             width: 100%;
+            border-radius: 24px;
+        }
+        .profile_pic{
+            height: 60px;
+            width: 60px;
+            object-fit: contain;
+            background-color: #fff;
+            border-radius: 50%;
+            border: 1px solid rgb(211, 208, 208);
+
+        }
+        .btn{
+            background-color: #ff69b4;
+            --bs-btn-border-color: #fff;
+            --bs-btn-hover-border-color: #fff;
+            --bs-btn-hover-color: #fff;
+            --bs-btn-hover-bg: #ec00ec ;
+        }
+        .list-group-item:hover{
+            transform: scale(155%);
+            margin-top: 15px;
+            margin-bottom: 15px;
+            transition: all ease-in-out 0.3s;
+        }
+        .custom-tooltip.tooltip > .tooltip-inner{
+            background-color: rgb(242, 132, 132);
+            color: white;
+            padding: 10px;
+            border: solid rgb(243, 190, 190) 2px;
         }
         @media (max-width: 686px) {
             .sidebar {
@@ -122,7 +152,7 @@
                 display: block;
             }
             .banner{
-                padding-top: 10vh;
+                padding-top: 9vh;
             }
             .main_item_img_small{
             display: none;
@@ -130,36 +160,36 @@
         }
     </style>
 </head>
-<body>
+<body style="margin:0">
     <nav class="sidebar show col-md-2">
         <div class="list-group list-group-flush">
-            <a href="HomePage.html" class="list-group-item list-group-item-action">
+            <a href="HomePage.html" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="HOME" data-bs-placement="right">
                 <img src="Assets/Logo.png" alt="" class="logo">
-              </a>
-              <a href="AboutPage.html" class="list-group-item list-group-item-action">
+            </a>
+            <a href="AboutPage.html" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="ABOUT US" data-bs-placement="right">
                 <img src="Assets/About.png" alt="" class="icon">
-              </a>
-              <a href="ProductAndServicesPage.html" class="list-group-item list-group-item-action">
+            </a>
+            <a href="ProductAndServicesPage.html" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="PRODUCTS" data-bs-placement="right">
                 <img src="Assets/Products.png" alt="" class="icon">
-              </a>
-              <a href="PersonnelPage.html" class="list-group-item list-group-item-action">
+            </a>
+            <a href="PersonnelPage.html" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="PERSONNEL" data-bs-placement="right">
                 <img src="Assets/Personnel.png" alt="" class="icon">
-              </a>
-              <a href="EventsPage.html" class="list-group-item list-group-item-action">
+            </a>
+            <a href="EventsPage.html" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="NEWS" data-bs-placement="right">
                 <img src="Assets/News.png" alt="" class="icon">
-              </a>
-              <a href="BlogPage.html" class="list-group-item list-group-item-action">
+            </a>
+            <a href="BlogPage.html" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="BLOG" data-bs-placement="right">
                 <img src="Assets/Blogs.png" alt="" class="icon">
-              </a>
-              <a href="CommercialPage.html" class="list-group-item list-group-item-action">
+            </a>
+            <a href="CommercialPage.html" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="VIDEOS" data-bs-placement="right">
                 <img src="Assets/AV.png" alt="" class="icon">
-              </a>
-              <a href="SupportPage.html" class="list-group-item list-group-item-action">
+            </a>
+            <a href="SupportPage.html" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="SUPPORT" data-bs-placement="right">
                 <img src="Assets/Support.png" alt="" class="icon">
-              </a>
-              <a href="ContactPage.html" class="list-group-item list-group-item-action">
+            </a>
+            <a href="ContactPage.html" class="list-group-item list-group-item-action" data-bs-toggle="tooltip" data-bs-title="CONTACT US" data-bs-placement="right">
                 <img src="Assets/Contacts.png" alt="" class="icon">
-              </a>
+            </a>
         </div>
     </nav>
     
@@ -202,19 +232,22 @@
     </div>
     </nav>
 
-    <div class="row banner container-fluid">
-        <div class="col-md-10 offset-md-1">
-            <h1>Banner</h1>
-        </div>
+    <div class="banner container">
+        
     </div>
     
     <div class="row maincontent container-fluid">
         <div class="col-md-10 offset-md-1">
-            <h1 class="text-center my-5"><strong>NEWS AND EVENTS</strong></h1>
 
+            <h1 class="text-center my-4" style="font-family: Tahoma;"><strong>NEWS AND EVENTS</strong></h1>
+
+
+            <!--ITEMS-->
             <div class="card my-2">
-                <h5 class="card-header"><strong>Featured</strong></h5>
-                <!--ITEMS-->
+                <h6 class="card-header d-flex align-items-center">
+                    <img class='profile_pic me-3' src="Assets/Logo.png" alt="">
+                    <strong>Sugar Trend</strong>
+                </h6>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-12">
@@ -233,40 +266,75 @@
                             <p class="card-text">
                                 <a href="#">#sugartrend</a> <a href="#">#cakesph</a> <a href="#">#treslechesph</a> <a href="#">#creampuffmanila</a>
                             </p>
+                            <a href="#" class="btn btn-primary btn_color">Read More →</a>
+                        </div>
+                    </div>
+                </div>               
+            </div>
+            <!--ITEM-->
+
+            <!--ITEM-->
+            <div class="card my-2">
+                <h6 class="card-header d-flex align-items-center">
+                    <img class='profile_pic me-3' src="Assets/Logo.png" alt="">
+                    <strong>Sugar Trend</strong>
+                </h6>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-md-9 col-12">
+                                    <img class="main_item_img" src="Images/Cake_Event1_Valentine.jpg" alt="">
+                                </div>
+                                <div class="col-3">
+                                    <img class="main_item_img_small mb-4" src="Images/Cake_Event2_Valentine.jpg" alt="">
+                                    <img class="main_item_img_small" src="Images/Cake_Event3_Valentine.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <h5 class="card-title">ITS BAAAACK! Our Tres Leches Heart Cakes are back! And it will only be available on Feb 13-14. 🫶🏻</h5>
+                            <p class="card-text">
+                                <a href="#">#sugartrend</a> <a href="#">#cakesph</a> <a href="#">#treslechesph</a> <a href="#">#creampuffmanila</a> <a href="#">#valentinesday </a>
+                            </p>
                             <a href="#" class="btn btn-primary">Read More →</a>
                         </div>
                     </div>
                 </div>
-                <!--ITEMS-->                
-              </div>
+            </div>
+            <!--ITEM-->
+
+            <!--ITEM-->
             <div class="card my-2">
-            <h5 class="card-header"><strong>Featured</strong></h5>
-              <!--ITEMS-->
-              <div class="card-body">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="row">
-                            <div class="col-md-9 col-12">
-                                <img class="main_item_img" src="Images/Cake_Event1_Valentine.jpg" alt="">
-                            </div>
-                            <div class="col-3">
-                                <img class="main_item_img_small mb-4" src="Images/Cake_Event2_Valentine.jpg" alt="">
-                                <img class="main_item_img_small" src="Images/Cake_Event3_Valentine.jpg" alt="">
+                <h6 class="card-header d-flex align-items-center">
+                    <img class='profile_pic me-3' src="Assets/Logo.png" alt="">
+                    <strong>Sugar Trend</strong>
+                </h6>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-md-9 col-12">
+                                    <img class="main_item_img" src="Images/Cake_Event1_Christmas.jpg" alt="">
+                                </div>
+                                <div class="col-3">
+                                    <img class="main_item_img_small mb-4" src="Images/Cake_Event2_Christmas.jpg" alt="">
+                                    <img class="main_item_img_small" src="Images/Cake_Event3_Christmas.jpg" alt="">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-12 mt-4">
-                        <h5 class="card-title">ITS BAAAACK! Our Tres Leches Heart Cakes are back! And it will only be available on Feb 13-14. 🫶🏻</h5>
-                        <p class="card-text">
-                            <a href="#">#sugartrend</a> <a href="#">#cakesph</a> <a href="#">#treslechesph</a> <a href="#">#creampuffmanila</a> <a href="#">#valentinesday </a>
-                        </p>
-                        <a href="#" class="btn btn-primary">Read More →</a>
+                        <div class="col-12 mt-4">
+                            <h5 class="card-title">Here’s our Christmas menu, a little something for your holiday gifts, giveaways and noche buena!</h5>
+                            <p class="card-text">
+                                <a href="#">#sugartrend</a> <a href="#">#cakesph</a> <a href="#">#treslechesph</a> <a href="#">#creampuffmanila</a> <a href="#">#christmasph</a>
+                            </p>
+                            <a href="#" class="btn btn-primary">Read More →</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!--ITEMS-->
-            </div>
-            
+            <!--ITEM-->
+
 
 
 
@@ -308,5 +376,11 @@
 
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl,{
+        'customClass': 'custom-tooltip'
+      }));
+    </script>
 </body>
 </html>
