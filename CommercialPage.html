@@ -186,7 +186,7 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                text-align: center; 
+                flex-wrap: wrap;
             }
         }
     </style>
@@ -266,22 +266,24 @@
     <div class="header sticky-top">
         <h1 class="text-center my-4" style="font-family: Tahoma;color: white;"><strong>Commercial Videos</strong></h1>
     </div>
-    
-        <div class="col-12 d-flex justify-content-center p-5" style="background-color: #E38C8D;">
-            <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fsugartrendcakes%2Fvideos%2F677959060902206%2F&show_text=false&width=267&t=0" width="1200" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+    <div class="container-fluid">
+        <div class="row" style="background-color: #ffffff;display: flex;justify-content: space-around; padding: 100px;flex-wrap: wrap;">
+            <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fsugartrendcakes%2Fvideos%2F677959060902206%2F&show_text=false&width=267&t=0" style="border:none;overflow:hidden;height: 400px; width: 800px;resize: both;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+            <h2 style="padding: 10px;width: 400px;"><strong>Have a look and be enthralled by our delicious bakes!</strong>
+            These are samples from our facebook page.
+            </h2>
         </div>
     
-        <div class="row maincontent container-fluid">
-            <div class="col-md-10" >
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="card my-2 mb-4">
+        <div class="row">
+            <div class="col-md-10 offset-md-1" >
+                <div class="row" style="display: flex;flex-wrap: wrap; justify-content: center;overflow: hidden;">
+                        <div class="card">
                             <h6 class="card-header d-flex align-items-center">
                                 <img class='profile_pic me-3' src="Assets/Logo.png" alt="">
                                 <strong>Sugar Trend</strong>
                             </h6>
                             <div class="card-body">
-                                <div class="col-12 ">
+                                <div class="container-fluid">
                                     <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fsugartrendcakes%2Fvideos%2F802496105149278%2F&show_text=false&width=380&t=0" width="100%" height="520" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
                                     <h5 class="card-title">Day 2 of our R&D.</h5>
                                     <p class="card-text">
@@ -291,9 +293,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-12">
-                        <div class="card my-2 mb-4">
+                        <div class="card">
                             <h6 class="card-header d-flex align-items-center">
                                 <img class='profile_pic me-3' src="Assets/Logo.png" alt="">
                                 <strong>Sugar Trend</strong>
@@ -309,9 +309,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-12">
-                        <div class="card my-2 mb-4">
+                        <div class="card">
                             <h6 class="card-header d-flex align-items-center">
                                 <img class='profile_pic me-3' src="Assets/Logo.png" alt="">
                                 <strong>Sugar Trend</strong>
@@ -327,9 +325,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-12">
-                        <div class="card my-2 mb-4">
+                        <div class="card">
                             <h6 class="card-header d-flex align-items-center">
                                 <img class='profile_pic me-3' src="Assets/Logo.png" alt="">
                                 <strong>Sugar Trend</strong>
@@ -345,12 +341,10 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
                 </div>
-    
             </div>
         </div>
-
+    </div>
     <footer class="footer" style="background-color: #E38C8D;color: white;">
         <div class="container">
             <div class="row">
