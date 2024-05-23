@@ -465,12 +465,17 @@ footer{
         margin-top: 60px;
     }
     .img_big_1{
-      height: 350px;
+      margin-top: 10px;
+      margin-left: 100px;
+      width: 70%;
     }
 }
 
 @media (max-width: 900px) {
     .journey{
         display: none;
+    }
+    .img_big_1{
+      width: 65%;
     }
 }
