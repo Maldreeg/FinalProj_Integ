@@ -441,6 +441,7 @@ footer{
 }
 
   @media (max-width: 686px) {
+    
     .sidebar {
       display: none;
     }
@@ -458,6 +459,9 @@ footer{
     footer{
         padding: 20px 40px;
         margin-top: 60px;
+    }
+    .img_big_1{
+      height: 350px;
     }
 }
 

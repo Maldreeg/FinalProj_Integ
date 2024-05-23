@@ -151,19 +151,19 @@
             
         }
         .header {
-    height: 10vh;
-    background-color: #E38C8D; 
-    color: white; 
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .header h1 {
-    margin: 0;
-    font-size: 12px;
-  }
+            height: 10vh;
+            background-color: #E38C8D; 
+            color: white; 
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
         
         footer{
             padding: 20px 120px;
@@ -179,16 +179,20 @@
             .banner{
                 padding-top: 9vh;
             }
+            .header{
+                display: none;
+            }
             .img-fluid{
             height: 500px;
             }
             .maincontent {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center; 
-}
+                
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center; 
+            }
         }
     </style>
 </head>
@@ -265,23 +269,18 @@
     </nav>
 
     <div class="header sticky-top">
-        <h1 style="color: #fff;">Commercials</h1>
+        <h1 class="text-center my-4" style="font-family: Tahoma;color: white;"><strong>Commercial Videos</strong></h1>
     </div>
     
-    <div class="maincontent">
-        <div class="col-md-10 offset-md-1">
-            <h1 class="text-center my-4" style="font-family: Tahoma;"><strong>Commercial Videos</strong></h1>
-        </div>
-        
         <div class="col-12 d-flex justify-content-center p-5" style="background-color: #E38C8D;">
             <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fsugartrendcakes%2Fvideos%2F677959060902206%2F&show_text=false&width=267&t=0" width="1200" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
         </div>
     
-        <div class="row maincontent container-fluid">
+        <div class="row container-fluid">
             <div class="col-md-10">
     
                 <div class="row">
-                    <div class="col-md-6 col-12">
+                    <div class="col-md-6">
                         <div class="card my-2 mb-4">
                             <h6 class="card-header d-flex align-items-center">
                                 <img class='profile_pic me-3' src="Assets/Logo.png" alt="">
@@ -371,7 +370,6 @@
     
             </div>
         </div>
-    </div>
 
     <footer class="footer" style="background-color: #E38C8D;color: white;">
         <div class="container">
